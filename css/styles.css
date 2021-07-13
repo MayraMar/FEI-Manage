@@ -1,0 +1,27 @@
+
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header div nav ul{
+    list-style-type: none;
+    display: flex;
+    width: 600px;
+}
+
+header div nav ul li{
+    padding: 10px;
+}
+
+main .different, main .sales, main .opinion div{
+    display: flex;
+}
