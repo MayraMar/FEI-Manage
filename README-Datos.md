@@ -9,5 +9,5 @@ Utilice esta sección para delinear las áreas en las que desea continuar enfoc�
 
 ## Autor
 
-[Agregue su nombre aquí]
+Mayra Martinez
 

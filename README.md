@@ -35,4 +35,4 @@ El formulario se cerrará el Domingo 18/07 a las 23hs Argentina.
 
 ## ¿Tienes comentarios para nosotros?
 
-Dejo este espacio para cualquier comentario y/o sugerencia.
+Gracias Nico por esta oportunidad!!
