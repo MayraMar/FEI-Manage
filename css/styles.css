@@ -19,13 +19,19 @@
     --rojo-palido: rgb(255, 239, 234);
 }
 
+/* body object.fondo{
+    position: absolute;
+    background-color: aqua;
+    z-index: -1;
+} */
+
 header div{
     display: flex;
     font-size: 0.8rem;
     justify-content: space-between;
     align-items: center;
     padding: 45px 150px;
-}
+    }
 
 header div nav ul{
     list-style-type: none;
@@ -59,7 +65,7 @@ a:hover{
 }
 
 main .different, main .sales{
-    padding: 40px 150px;
+    padding: 40px 10vw;
 }
 
 main .different, main .sales {
@@ -126,13 +132,13 @@ main .different, main .sales {
 .opinion h3{
     color:var(--azul-titulos);
     font-size: 2.5rem;
-    margin: 50px 0px;
+    margin: 20px 0px;
 }
 
 .opinion-div{
     display: flex;
     justify-content: space-between;
-    margin: 50px 0px;
+    margin: 70px 0px 50px 0px;
 }
 
 
@@ -246,6 +252,18 @@ footer div.foo-down div form a{
     padding: 7px;
 }
 
+@media (max-width:1200px){
+    html{
+        font-size: 14px;
+    }
+    .sales div h1{
+        font-size: 2.5rem;
+    }
+
+    .different div h3, .opinion h3{
+        font-size: 2rem;
+    }
+
 @media (max-width:800px){
 
     html{
@@ -333,8 +351,8 @@ footer div.foo-down div form a{
         position: absolute;
         top: 20px;
         opacity: 0;
-        width: 60%;
-        left:20%;
+        width: 80%;
+        left:10%;
     }
 
     .opinion #links{
