@@ -277,6 +277,7 @@ footer div.foo-down div form a{
 
     header div::after{
         content: url(../imagenes/icon-hamburger.svg);
+        padding-right: 10px;
         
     }
 
@@ -289,7 +290,7 @@ footer div.foo-down div form a{
     }
 
     main .different, main .sales{
-        padding: 20px 30px;
+        padding: 20px 0px;
     }
 
     main .sales{
@@ -300,7 +301,7 @@ footer div.foo-down div form a{
     }
 
     .sales div, .different div{
-    width: 95%;
+    width: 100%;
     }
 
     .sales div h1{
