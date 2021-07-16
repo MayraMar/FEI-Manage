@@ -38,11 +38,7 @@ header div nav ul li{
     padding: 10px;
 }
 
-header div nav ul li:hoover{
-    font-size: 2;
-}
-
-button{
+a{
     background-color: var(--naranja-botones);
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     border-style: none;
@@ -51,17 +47,22 @@ button{
     font-weight: 500;
     padding: 10px;
     width: 135px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 0.8rem;
+    display: inline-block;
 }
 
-button:hoover{
-    color: black;
+a:hover{
+    opacity: 50%;
 }
 
 main .different, main .sales{
     padding: 40px 150px;
 }
 
-main .different, main .sales, main .opinion-div{
+main .different, main .sales {
     display: flex;
     justify-content: space-between;
     
@@ -112,11 +113,6 @@ main .different, main .sales, main .opinion-div{
     position: relative;
 }
 
-/* .different div ol li h4{
-    display: inline-block;
-    
-} */
-
 .different div ol li p{
     color:var(--grey-texto);
     font-weight: 500;
@@ -134,16 +130,26 @@ main .different, main .sales, main .opinion-div{
 }
 
 .opinion-div{
+    display: flex;
+    justify-content: space-between;
     margin: 50px 0px;
 }
+
 
 .opinion div div{
     position:relative;
     background-color: var(--lightgrey-fondo);
-    width: 22%;
+    width: 32%;
     padding: 50px 20px;
 }
 
+.opinion div div:nth-child(4){
+    display: none;
+}
+
+.opinion #links{
+    display: none;
+}
 .opinion div div img{
     width: 70px;
     height: 70px;
@@ -179,7 +185,7 @@ footer div.foo-up h3{
     line-height: 48px;
 }
 
-footer div.foo-up button{
+footer div.foo-up a{
     background-color:white;
     color: var(--naranja-foot);
 }
@@ -212,12 +218,20 @@ footer div.foo-down div ul{
 
 footer div.foo-down div ul li{
     padding:5px;
+    
 }
 
 footer div.foo-down nav ul{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 0.8rem;
+    
+}
+
+footer div.foo-down nav ul li{
+    margin:5px;
+    font-weight: 400;
 }
 
 footer div.foo-down div form input{
@@ -227,18 +241,36 @@ footer div.foo-down div form input{
     border-style: none;
 }
 
-footer div.foo-down div form button{
+footer div.foo-down div form a{
     width: 50px;
-    padding: 5px;
+    padding: 7px;
 }
 
-@media (max-width:500px){
-    
-    header div nav, header div button{
+@media (max-width:800px){
+
+    html{
+        font-size: 12px;
+    }
+
+    header div{
+        padding: 30px 20px 10px 20px;
+        justify-content: space-between;
+    }
+
+    header div::after{
+        content: url(../imagenes/icon-hamburger.svg);
+        
+    }
+
+    header div nav, header div a{
         display: none;
     }
     
     main {
+        padding: 10px 30px;
+    }
+
+    main .different, main .sales{
         padding: 20px 30px;
     }
 
@@ -246,11 +278,11 @@ footer div.foo-down div form button{
         text-align: center;
         flex-wrap: wrap;
         flex-direction: column-reverse;
-        /* align-items: center; */
+        align-items: center;
     }
 
     .sales div, .different div{
-    width: 90%;
+    width: 95%;
     }
 
     .sales div h1{
@@ -288,6 +320,56 @@ footer div.foo-down div form button{
         left: 0px;
     }
 
+    .opinion-div{
+        position: relative;
+        display: block;
+        text-align: center;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .opinion .opinion-div div{
+        display: block;
+        position: absolute;
+        top: 20px;
+        opacity: 0;
+        width: 60%;
+        left:20%;
+    }
+
+    .opinion #links{
+        display: block;
+        
+    }
+
+    .opinion #links a{
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--lightgrey-fondo);
+        padding:5px;
+        margin: 5px;
+        margin-bottom: 25px;
+        box-shadow: none;
+        border: var(--naranja-botones) 1px solid;
+    }
+
+    .opinion .opinion-div div:nth-child(4){
+        display: block;
+    }
+
+    .opinion .opinion-div div:nth-child(1){
+        opacity: 1;
+    }
+
+    .opinion .opinion-div div:target{
+        opacity: 1;
+    }
+
+
+    .opinion #links a:focus{
+        background-color:var(--naranja-botones);
+    }
+
     footer div.foo-up {
         flex-direction: column;
         align-items: center;
@@ -303,8 +385,7 @@ footer div.foo-down div form button{
 
     footer div.foo-down {
         flex-direction: row;
-
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         align-items: center;
         justify-content: center;
         text-align: center;
